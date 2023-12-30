@@ -3,6 +3,7 @@ repos:
     rev: 23.12.1
     hooks:
     - id: black
+      args: [--skip-string-normalization]
       exclude: \.py-tpl$
   - repo: https://github.com/adamchainz/blacken-docs
     rev: 1.16.0
@@ -18,7 +19,7 @@ repos:
     rev: 6.1.0
     hooks:
       - id: flake8
-#  - repo: https://github.com/pre-commit/mirrors-eslint
-#    rev: v8.56.0
-#    hooks:
-#      - id: eslint
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.56.0
+    hooks:
+      - id: eslint
